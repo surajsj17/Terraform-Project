@@ -1,6 +1,6 @@
 
 provider "aws" {
-  region  =  "ap-south-1a"
+  region  =  "ap-south-1b"
 }
 
 resource "aws_instance" "app_server" {
