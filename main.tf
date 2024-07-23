@@ -13,11 +13,11 @@ resource "aws_instance" "app_server" {
    user_data =  <<-EOF
                 #!/bin/bash
                 sudo yum update -y
-                sudo yum install nginx -y
-                sudo systemctl start nginx
-                sudo systemctl enable nginx
+                sudo yum install httpd -y
+                sudo systemctl start httpd
+                sudo systemctl enable httpd
                 sudo echo 'Hello, World!' > /var/www/html/index.html
-                sudo systemctl restart nginx
+                sudo systemctl restart httpd
         EOF
   tags = {
     Name = "My_web_page"
