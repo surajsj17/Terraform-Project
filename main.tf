@@ -1,6 +1,6 @@
 
 provider "aws" {
-  region  = var.region
+  region  =  "ap-south-1a"
 }
 
 resource "aws_instance" "app_server" {
